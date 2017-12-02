@@ -3,20 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>SHOW LIST OF USERS</title>
-  <link rel="stylesheet" href="css/showusers.css">
+
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">
+  <script src="https://unpkg.com/circlebars@1.0.3/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/circlebars@1.0.3/dist/circle.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/skins/whitecircle.css">
 </head>
+<style>
+#container{
+  margin-top: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: 'Lato', sans-serif;
+min-height: 100vh;
+min-width: 100%;
+background: #222;
+}
+</style>
 <body>
   <div class="container1">
     <h3>Information Generator</h3>
     <br>
     <p>Type your git username in the text field: </p>
-    <input type="text" id="username">
+    <input type="text" value="rahul2240" id="username">
 
     <button onclick="load()">Submit</button>
   </div>
 <div id="container">
 
+  <div id="circle-2" data-circle-fontSize="50px" data-circle-size="250px" data-circle-dialWidth=10 data-circle-skin="white">
+      <div class="loader-bg">
+          <div class="text">00:00:00</div>
+      </div>
+  </div>
+  <div id="circle-3" data-circle-fontSize="50px" data-circle-size="250px" data-circle-dialWidth=10 data-circle-skin="white">
+      <div class="loader-bg">
+          <div class="text">00:00:00</div>
+      </div>
+  </div>
+  <div id="circle-4" data-circle-fontSize="50px" data-circle-size="250px" data-circle-dialWidth=10 data-circle-skin="white">
+      <div class="loader-bg">
+          <div class="text">00:00:00</div>
+      </div>
+  </div>
+  <div id="circle-10" data-circle-fontSize="50px" data-circle-size="250px" data-circle-dialWidth=10 data-circle-skin="white">
+      <div class="loader-bg">
+          <div class="text">00:00:00</div>
+      </div>
+  </div>
 </div>
 
 <script src="js/language.js" charset="utf-8"></script>

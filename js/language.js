@@ -1,3 +1,4 @@
+var count = 0;
 function load(){
   var username = document.getElementById("username").value;
   var url = "https://api.github.com/users/"+username + "/repos";
@@ -16,41 +17,55 @@ request.open("GET",url,true);
 request.send();
 }
 
-
-
+var langObj = {
+}
 
 function Datafunction(data){
   var info = JSON.parse(data.responseText);
   var language = [];
-  console.log(info);
+  var langObj = {
+    ruby: 0
+  };
+
   var li="";
-  var count = 0;
-  for(var i in info)
-    {
+  li= "";
 
-        count+=1;
-        language[i] = info[i].language;
+  for(var i in info) {
+
+      language[i] = info[i].language;
+
     }
-
-
-    uniqueArray = language.filter(function(item, pos) {
-      return language.indexOf(item) == pos;
-  })
 // usage example:
+var count = 30
 
+language.sort();
+console.log(language);
+language.filter(function(val) { return val !== null; }).join(", ")
+   var current = null;
+   var cnt = 0;
+   console.log(language.length);
+   for (var i = 0; i < language.length; i++) {
+       if (language[i] != current && language[i]!=null) {
+           if (cnt > 0) {
+             new Circlebar({
+                   element : `#circle-${i}`,
+                   type : "progress",
+                 maxValue: (cnt/count)*100
+             });
+           }
+           current = language[i];
+           cnt = 1;
+       } else {
+           cnt++;
+       }
+   }
+   if (cnt > 0) {
+     new Circlebar({
+           element : "#circle-10",
+           type : "progress",
+         maxValue: (cnt/count)*100
+     });
+   }
 
-for(var i in uniqueArray)
-  {
-    li +="<ul><li>"+
-
-      "<b>NAME:</b> "+
-      uniqueArray[i]
-
-      + "</li></ul>";
-
-  }
-
-  document.getElementById("container").innerHTML = li;
-  document.getElementById("count").innerHTML = count;
 
 }
