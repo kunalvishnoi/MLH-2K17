@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tracker</title>
         
-      
+      <link rel="stylesheet" type="text/css" href="css/animate.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
@@ -16,22 +16,31 @@
 <body>
 
    <fieldset>
-     <legend><h2 class="head">PROPER KODO</h2></legend>
- 
+     <legend><img src="images/Logo.png" height="60px" width="60px" style="display : inline-block; margin-top: 10px;"><h2 class="head" style="display : inline-block;">PROPER KODO</h2></legend>
+      <div style="margin-left: 600px;" class="container1">
+    <h3 style="font-family: 'arial';">Github</h3>
+    
+    <p style="font-family: 'arial';">Type your git username in the text field: </p>
+    <input type="text" id="username">
+
+    <button onclick="load()">Submit</button>
+  </div>
+
+ <div id="display" style="display: none;">
     <div class="left">
   
-      <h3 style="font-family: BEBAS">About Me</h3>
+      <h2 style="font-family: BEBAS;">About Me</h2>
       <br>
        <div class="border">
-      <h4 style="display: inline-block;">NAME :<br><br>
+      <h4 class="animated slideInLeft" style="display: inline-block; letter-spacing: 5px;">NAME :<br><br>
     EDUCATION :<br><br>
    ADDRESS :  <br><br>
  EXPERIENCE : 
 </h4>
 
-<h4 style="display: inline-block; margin-left: 35px;">
-  Henry<br><br>
-  B.Tech<br><br>New York<br><br>4 Years
+<h4 class=" animated slideInLeft" style="display: inline-block; margin-left: 55px;">
+  Rahul Singh<br><br>
+  B.Tech<br><br>New Delhi<br><br>4 Years
 </h4>
 </div>
 
@@ -40,6 +49,14 @@
       <br>
   
     </div>
+ 
+
+   <div style="margin-left: 600px;" id="container">
+
+</div>
+</div>
+
+<script src="javascript/language.js" charset="utf-8"></script>
   </fieldset>
 
 </body>

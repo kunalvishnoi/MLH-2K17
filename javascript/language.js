@@ -1,5 +1,6 @@
 function load(){
   var username = document.getElementById("username").value;
+  document.getElementById("display").style.display="block";
   var url = "https://api.github.com/users/"+username + "/repos";
 
 var request = new XMLHttpRequest();
@@ -43,7 +44,7 @@ for(var i in uniqueArray)
   {
     li +="<ul><li>"+
 
-      "<b>NAME:</b> "+
+    
       uniqueArray[i]
 
       + "</li></ul>";
