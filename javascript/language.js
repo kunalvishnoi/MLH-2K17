@@ -1,7 +1,8 @@
 var count = 0;
 function load(){
+  
   var username = document.getElementById("username").value;
-  document.getElementById("display").style.display="block";
+
   var url = "https://api.github.com/users/"+username + "/repos";
 
 var request = new XMLHttpRequest();
